@@ -1,0 +1,29 @@
+
+<div class="container">
+ <div class="row">
+    <div class="col-lg-12">
+      <H1>See all products</H1>
+    </div>
+    <div class="col-lg-5 text-background">
+      <h2><%= @product.title %></h2>
+      <p>  <%= @product.description %></p>
+      <p>  <%= @product.brand %> </p>
+      <p>  <%= @product.price %> € </p>
+      <br>
+      <%= link_to "to the product", product_path(@product), class: "btn btn-primary" %>
+    </div>
+
+    <div class="col-lg-1">
+    </div>
+
+    <div class="col-lg-6 photo">
+      <p>photo</p>
+    </div>
+ </div>
+</div>
+
+
+
+
+
+
