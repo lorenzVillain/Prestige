@@ -1,0 +1,44 @@
+<--! Here I show all my products of x category -->
+
+<div class="container">
+ <div class="row">
+
+   <div class="col-lg-12">
+   <H1>See all products</H1>
+    </div>
+
+   <% @products.each do |product| %>
+
+     <div class="col-lg-5 text-background">
+       <h2><%= product.category %></h2>
+       <p> title: <%= product.title%></p>
+       <p> description: <%= product.description%></p>
+       <p> brand: <%= product.brand%> </p>
+       <p> price: <%= product.price%> € </p>
+      <!-- for later <p> gender: <%= product.gender%> </p> -->
+       <br>
+       <%= link_to "to the product", product_path(product), class: "btn btn-primary" %>
+     </div>
+
+     <div class="col-lg-1">
+     </div>
+
+     <div class="col-lg-6 photo">
+      <p>photo</p>
+     </div>
+
+
+   <% end %>
+ </div>
+</div>
+
+
+<br>
+
+<!-- Leave it until the landing page has been created
+
+<div>
+<%= link_to "go to landing  page ", root_path %>
+</div>
+
+-->
