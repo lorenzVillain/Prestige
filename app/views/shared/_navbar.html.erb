@@ -50,4 +50,25 @@
     <hr>
     <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
   </div>
+
+
+    <div>
+      <li>
+        <%=link_to "Connexion", new_user_session_path %>
+      </li>
+
+      <li>
+        <%=link_to "ConnectwithFacebook", user_omniauth_authorize_path(:facebook) %>
+      </li>
+
+    </div>
+
+    <div>
+      <% if user_signed_in? %>
+
+      <%= image_tag current_user.try(:picture) || "default_user.jpg", class: "img-avatar" %>
+
+      <%end %>
+    </div>
+
 </nav>
