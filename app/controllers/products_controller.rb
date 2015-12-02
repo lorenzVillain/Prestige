@@ -1,9 +1,9 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only:[:show, :index, :new, :create]
+  before_action :authenticate_user!, except: [:index, :show]
 
-
- before_action :set_product, only:[:show, :index, :new, :create]
  def new
-   @product = product.new
+   @product = Product.new
  end
 
  def index
