@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20151203140954) do
 
   create_table "orders", force: :cascade do |t|
     t.integer  "renter_id"
-    t.string   "owner_id"
+    t.integer  "owner_id"
     t.string   "integer"
     t.integer  "product_id"
     t.integer  "rent_cost"
