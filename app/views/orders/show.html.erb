@@ -1,0 +1,33 @@
+
+<div class="container">
+ <div class="row">
+    <div class="col-lg-12">
+      <H1>See all products</H1>
+    </div>
+    <div class="col-lg-5 text-background">
+      <h2><%= @order.title %></h2>
+      <p> <%=order.renter_id%></p>
+       <p> <%=order.owner_id%></p>
+       <p> <%=order.product_id%> </p>
+       <p> <%=order.rent_cost%></p>
+       <p> <%=order.freight_cost%></p>
+       <p><%=order.submission_date%></p>
+       <p><%=order.delivery_date%></p>
+       <p><%=order.return_date%></p>
+       <p><%=order.finalreception_date%></p>
+       <p><%=order.origin_city%></p>
+       <p><%=order.origin_country%></p>
+       <p><%=order.detination_city%></p>
+       <p><%=order.destination_country%></p>
+      <br>
+      <%= link_to "to the order", order_path(@order), class: "btn btn-primary" %>
+    </div>
+
+    <div class="col-lg-1">
+    </div>
+
+    <div class="col-lg-6 photo">
+      <p>photo</p>
+    </div>
+ </div>
+</div>
