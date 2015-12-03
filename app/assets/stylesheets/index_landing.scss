@@ -1,0 +1,29 @@
+h1, h2, h3{
+  color: white;
+  text-align: center;
+  font-family: 'BlairMdlTC TT Medium';
+}
+
+h1 {
+  font-size: 50;
+}
+
+h2, h3 {
+  font-size: 17;
+}
+
+body {
+    background-color: black;
+}
+
+.row {
+   display: inline-block;
+   text-align: center;
+}
+
+h3 {
+   position: absolute;
+   /* top: 200px;
+   left: 0; */
+   width: 100%;
+}
