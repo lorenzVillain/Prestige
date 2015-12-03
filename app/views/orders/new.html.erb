@@ -1,0 +1,15 @@
+<!-- TODO create a order form -->
+<div class="container">
+ <div class="row">
+     <%= form_for @order do |f| %>
+      Delivery date:    <%= f.date_select :delivery_date %>
+    </br>
+      Return date:   <%= f.date_select :return_date %>
+    </br>
+        <%= f.submit %>
+     <% end %>
+ </div>
+</div>
+
+
+<br>
