@@ -1,15 +1,18 @@
+@font-face { font-family: Delicious; src: url('JuliusSansOne-Regular.ttf'); }
+
 h1, h2, h3{
   color: white;
   text-align: center;
-  font-family: 'BlairMdlTC TT Medium';
+  font-family: 'JuliusSansOne-Regular';
 }
 
 h1 {
-  font-size: 50;
+  font-size: 80;
+  font-weight: bold;
 }
 
 h2, h3 {
-  font-size: 17;
+  font-size: 15;
 }
 
 body {
@@ -17,7 +20,7 @@ body {
 }
 
 .row {
-   display: inline-block;
+/* display: inline-block;*/
    text-align: center;
 }
 
