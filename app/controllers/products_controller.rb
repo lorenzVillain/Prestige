@@ -15,6 +15,21 @@ class ProductsController < ApplicationController
   end
  end
 
+  def index_watches
+    @products = Product.where(category: "watches")
+
+  end
+
+ def index_bags
+  @products = Product.where(category: "bags")
+
+ end
+
+  def index_jewelry
+    @products = Product.where(category: "jewelry")
+
+ end
+
  def show
    @product = Product.find(params[:id])
    @order = Order.new
