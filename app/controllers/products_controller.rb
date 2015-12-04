@@ -16,19 +16,16 @@ class ProductsController < ApplicationController
  end
 
   def index_watches
-    @products = Product.where(category: "watches")
-
+    @products = Product.where(category: "watch")
   end
 
  def index_bags
-  @products = Product.where(category: "bags")
-
+    @products = Product.where(category: "bags")
  end
 
   def index_jewelry
     @products = Product.where(category: "jewelry")
-
- end
+  end
 
  def show
    @product = Product.find(params[:id])
