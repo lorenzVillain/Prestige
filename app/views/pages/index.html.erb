@@ -4,31 +4,42 @@
     <h1>PRESTIGE</h1>
     <h2>RENT THE COOLEST LUXURY FASHION</h2>
   </div>
-  <div class="video">
-<a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/yzG_3UJ-LvU',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
 
+  <div class="video">
+    <a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/yzG_3UJ-LvU',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
   </div>
 
   <div class="container">
 
-  <div class="row">
-    <div class="col-md-4">
-      <h3>JEWELRY</h3>
+    <div class="row">
+
+      <!-- TODO CHANGE THE PATHS -->
+      <%= link_to products_jewelry_path  do %>
+      <div class="col-md-4">
+        <h3>JEWELRY</h3>
         <%= image_tag "landing_jewelry.png", alt: "Jewelry" %>
+      </div>
+      <% end %>
+
+
+      <!-- TODO CHANGE THE PATHS -->
+      <%= link_to products_bags_path do %>
+      <div class="col-md-4">
+        <h3>BAGS</h3>
+        <%= image_tag "landing_bag.png", alt: "Bag" %>
+      </div>
+      <% end %>
+
+      <!-- TODO CHANGE THE PATHS -->
+      <%= link_to products_watches_path  do %>
+      <div class="col-md-4">
+        <h3>WATCHES</h3>
+        <%= image_tag "landing_watch.png", alt: "Watch" %>
+      </div>
+      <% end %>
+
+    </div>
+
   </div>
 
-  <div class="col-md-4">
-    <h3>BAGS</h3>
-    <%= image_tag "landing_bag.png", alt: "Bag" %>
-  </div>
-
-  <div class="col-md-4">
-    <h3>WATCHES</h3>
-    <%= image_tag "landing_watch.png", alt: "Watch" %>
-
-  </div>
-
- </div>
-
-  </div>
 </div>
