@@ -1,1 +1,6 @@
 <h1>hey im on the bags index</h1>
+<ul>
+  <% @products.each do |product| %>
+    <li><%= product.description %></li>
+  <% end %>
+</ul>
