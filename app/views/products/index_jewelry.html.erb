@@ -9,20 +9,14 @@
      </div>
    </div>
 
-   <ul>
+  <div class="container">
    <% @products.each do |product| %>
-     <li><%= product.title %></li>
+<!--      <li><%= product.title %></li>
      <li><%= product.description %></li>
      <li><%= product.brand%></li>
      <li><%= product.category%></li>
-     <li><%= product.price %></li>
-       <% end %>
-       </ul>
-
-
-   <div class="container">
-     <!-- Example row of columns -->
-     <div class="row">
+     <li><%= product.price %></li> -->
+      <div class="row">
        <div class="col-md-4">
          <h2>Sweet Chanel</h2>
          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
@@ -30,7 +24,7 @@
          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
        <div class="col-md-4">
-         <h2>Heading</h2>
+         <h2><%= @products.first.title %></h2>
             <%= image_tag "necklaces.png", alt: "Jewelry" %>
          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p>category</p>
@@ -42,6 +36,9 @@
          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
      </div>
+    <% end %>
+  </div>
+
 
      <hr>
 
