@@ -1,45 +1,83 @@
-<div class="wrapper">
 
-  <div class="title">
-    <h1>PRESTIGE</h1>
-    <h2>RENT THE COOLEST LUXURY FASHION</h2>
-  </div>
 
   <div class="video">
     <a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/yzG_3UJ-LvU',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
   </div>
+  <!-- <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="{videoURL:'https://youtu.be/yzG_3UJ-LvU',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}"></iframe>
+</div> -->
 
+
+
+<div class="bg-white">
   <div class="container">
-
     <div class="row">
+      <div class="col-xs-4">
+        <div class="social-box">
+          <!-- your list of social links -->
+          <%= link_to products_jewelry_path  do %>
 
-      <!-- TODO CHANGE THE PATHS -->
-      <%= link_to products_jewelry_path  do %>
-      <div class="col-md-4">
-        <h3>JEWELRY</h3>
-        <%= image_tag "landing_jewelry.png", alt: "Jewelry" %>
+          <h3>JEWELRY</h3>
+          <%= image_tag "necklacesDark.png", alt: "Jewelry" %>
+
+          <% end %>
+        </div>
       </div>
-      <% end %>
-
-
-      <!-- TODO CHANGE THE PATHS -->
-      <%= link_to products_bags_path do %>
-      <div class="col-md-4">
-        <h3>BAGS</h3>
-        <%= image_tag "landing_bag.png", alt: "Bag" %>
+      <div class="col-xs-8">
+        <p>jewelry</p>
       </div>
-      <% end %>
-
-      <!-- TODO CHANGE THE PATHS -->
-      <%= link_to products_watches_path  do %>
-      <div class="col-md-4">
-        <h3>WATCHES</h3>
-        <%= image_tag "landing_watch.png", alt: "Watch" %>
-      </div>
-      <% end %>
-
     </div>
-
   </div>
+</div>
 
+
+      <!-- TODO CHANGE THE PATHS -->
+
+
+<div class="bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="social-box">
+          <!-- your list of social links -->
+          <%= link_to products_bags_path do %>
+
+          <h3>BAGS</h3>
+          <%= image_tag "BagsDark.png", alt: "Bag" %>
+
+          <% end %>
+        </div>
+      </div>
+      <div class="col-xs-8">
+        <p>bags</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- TODO CHANGE THE PATHS -->
+
+
+
+
+
+<div class="bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="social-box">
+          <!-- your list of social links -->
+          <%= link_to products_watches_path  do %>
+
+          <h3>WATCHES</h3>
+          <%= image_tag "watchesDark.png", alt: "Watch" %>
+
+          <% end %>
+        </div>
+      </div>
+      <div class="col-xs-8">
+        <p>watches</p>
+      </div>
+    </div>
+  </div>
 </div>
