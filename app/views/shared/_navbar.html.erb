@@ -33,7 +33,13 @@
             </li>
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
+                <i class="fa fa-shopping-bag"></i>  <%= t ".profile", default: "Home" %>
+              <% end %>
+            </li>
+            <li>
+              <!-- add the right link_to -->
+              <%= link_to orders_path do %>
+                <i class="fa fa-suitcase"></i>  <%= t ".profile", default: "Orders" %>
               <% end %>
             </li>
             <li>

@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :products , except: :index
   get "/home", to: "pages#index"
 
-  resources :orders, only: [:new, :create]
+  resources :orders, only: [:new, :create, :index, :destroy]
 
 end
