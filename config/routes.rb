@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' , registrations: 'users/registrations'}
   devise_scope :user do
     get 'profile', to: 'users/registrations#profile', as: 'profile'
+    get 'users/:id/show', to: 'users/registrations#show', as: 'show'
+    get 'vote', to: 'users/registrations#vote', as: 'vote'
   end
   root 'pages#index'
 

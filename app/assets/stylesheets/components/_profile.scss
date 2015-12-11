@@ -1,6 +1,3 @@
-.src-image {
-  display: none;
-}
 
 .card {
   overflow: hidden;
@@ -37,4 +34,101 @@
   -moz-border-radius: 50%;
   border-radius: 50%;
   border: 5px solid rgba(0,0,30,0.8);
+}
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+%fonticon-base {
+  display: inline-block;
+  font-family: "entypo";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  margin-right: 0.1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*="entypo-"]:before {
+  @extend %fonticon-base;
+}
+
+.rating {
+  margin-top: 3.5em;
+  text-align: center;
+  background-color: #4C4C4C;
+
+  li {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+  }
+
+  button {
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    // Using vw units allows this to scale up/down. Neato.
+    // I didn't use this on the live version, but it's cool.
+    font-size: 12vw;
+    height: 1.1em;
+    line-height: 2.6;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+    &:before,
+    &:after {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:after {
+      @extend %fonticon-base;
+      content: "\2605";
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.1s;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// The data-user-score attr will be set on the parent element
+// only after a user has provided a rating. That score will
+// be stored in localStorage
+//
+// Using this mixin so I don't have to manually write the
+// li:nth-child(-n4) block for each option
+@mixin rated($score) {
+  .rating[data-user-score="#{$score}"] {
+    li:nth-child(-n+#{$score}) {
+      button {
+        &:after {
+            opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Using the "rated" mixin. You can add/remove a star by
+// changing the upper value.
+@for $i from 1 through 5 {
+  @include rated($i);
 }
