@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' , registrations: 'users/registrations'}
+  devise_scope :user do
+    get 'profile', to: 'users/registrations#profile', as: 'profile'
+  end
   root 'pages#index'
+
   get "/products/watches", to: "products#index_watches"
   get "/products/bags", to: "products#index_bags"
   get "/products/jewelry", to: "products#index_jewelry"
@@ -9,5 +13,5 @@ Rails.application.routes.draw do
   get "/home", to: "pages#index"
 
   resources :orders, only: [:new, :create, :index, :destroy]
-
+  resources :products
 end

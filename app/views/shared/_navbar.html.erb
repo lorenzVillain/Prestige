@@ -1,80 +1,53 @@
-<nav class="navbar-wagon">
-  <div class="container navbar-wagon-container">
+<header>
+  <div class="navWrapper" id="home">
+    <div class=" clearfix">
+      <h2 class="companyName">Prestige</h2>
+      <nav class="mainNav clearfix">
+        <ul>
 
-    <a href="">
-      <%= image_tag "logo.png", class: "navbar-wagon-logo" %>
-    </a>
+          <li><%= link_to "Home", root_path %></li>
 
-    <div class="navbar-wagon-pusher"></div>
+          <li class="dropdown smoothScroll">
 
-    <form action="" class="navbar-wagon-search hidden-xs hidden-sm">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
-    <hr class="hidden-xs hidden-sm">
-    <% if user_signed_in? %>
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link hidden-xs" do %>
-        <div class="icon-badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="icon-badge icon-badge-blue">3</div>
-        </div>
-      <% end %>
-      <hr>
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to "#" do %>
+            <%= link_to "#", {class: "dropdown-toggle", "data-toggle" => "dropdown", "role" => "button", "aria-expanded" => "false"} do %>
+            Profile <span class="caret"></span>
+            <% end %>
+            <ul class="dropdown-menu" role="menu">
+              <% if signed_in? %>
+              <li class="menu-drop">
+                <%= link_to profile_path do %>
                 <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>
+                <% end %>
+              </li>
               <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-shopping-bag"></i>  <%= t ".profile", default: "Home" %>
-              <% end %>
-            </li>
-            <li>
-              <!-- add the right link_to -->
-              <%= link_to orders_path do %>
+
+              <li class="menu-drop">
+                <%= link_to orders_path do %>
                 <i class="fa fa-suitcase"></i>  <%= t ".profile", default: "Orders" %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    <% else %>
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <% end %>
-    <hr>
-    <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
-  </div>
+                <% end %>
+              </li>
+              <li class="menu-drop">
+                <% if signed_in? %>
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Sign out" %>
+                <% end %>
+                <% else %>
+                <%= link_to "Log in", new_user_session_path %>
+                <% end %>
+              </li>
+            </ul>
+          </li>
+
+          <li><%= link_to "Become a Renter", new_product_path, class: "smoothScroll" %>
 
 
-    <div>
-      <li>
-        <%=link_to "Connexion", new_user_session_path %>
-      </li>
+          </li>
+          <li><a href="#contact" class="smoothScroll">Contact</a></li>
 
-      <li>
-        <%=link_to "ConnectwithFacebook", user_omniauth_authorize_path(:facebook) %>
-      </li>
+        </ul>
+      </nav>
+    </div><!-- end .innerWrapper -->
+  </div><!-- end of .navWrapper -->
+</header>
 
-    </div>
 
-    <div>
-      <% if user_signed_in? %>
-
-      <%= image_tag current_user.try(:picture) || "default_user.jpg", class: "img-avatar" %>
-
-      <%end %>
-    </div>
-
-</nav>
