@@ -7,12 +7,7 @@ class ProductsController < ApplicationController
  end
 
  def index
-  if params[:category]
-    type = params[:category]
-    @products = Product.where(category: type)
-  else
     @products = Product.all
-  end
  end
 
   def index_watches
@@ -36,7 +31,7 @@ class ProductsController < ApplicationController
    @product = Product.new(product_params)
    if @product.save
      flash[:notice] = 'your product was created'
-     redirect_to_products_path
+     redirect_to products_path
    else
      flash[:notice] = 'Oops something went wrong'
      render 'new'

@@ -1,83 +1,127 @@
 
-
+<!--
   <div class="video">
     <a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/yzG_3UJ-LvU',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
   </div>
-  <!-- <div class="embed-responsive embed-responsive-16by9">
+   <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="{videoURL:'https://youtu.be/yzG_3UJ-LvU',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}"></iframe>
 </div> -->
 
-
-
-<div class="bg-white">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4">
-        <div class="social-box">
-          <!-- your list of social links -->
-          <%= link_to products_jewelry_path  do %>
-
-          <h3>JEWELRY</h3>
-          <%= image_tag "necklacesDark.png", alt: "Jewelry" %>
-
-          <% end %>
-        </div>
+ <div class="video">
+  <iframe class="vimeo"
+ src="//player.vimeo.com/video/43934591?title=0&amp;byline=0&amp;portrait=0&amp;color=3a6774&amp;autoplay=1&amp;loop=1"
+ width="960" height="540" frameborder="0" webkitallowfullscreen
+ mozallowfullscreen allowfullscreen></iframe>
+ <div class="overlay">
+   <div class="container">
+    <div class="redbar"></div>
+      <h1>title here</h1>
+      <div>
+        <small>Sall text here</small>
       </div>
-      <div class="col-xs-8">
-        <p>jewelry</p>
+      <div>
+        <button class="btn btn-primary">RENT NOW!</button>
       </div>
     </div>
-  </div>
+ </div>
 </div>
-
-
-      <!-- TODO CHANGE THE PATHS -->
-
-
-<div class="bg-white">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4">
-        <div class="social-box">
-          <!-- your list of social links -->
-          <%= link_to products_bags_path do %>
-
-          <h3>BAGS</h3>
-          <%= image_tag "BagsDark.png", alt: "Bag" %>
-
-          <% end %>
-        </div>
-      </div>
-      <div class="col-xs-8">
-        <p>bags</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <!-- TODO CHANGE THE PATHS -->
-
-
 
 
 
 <div class="bg-white">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-4">
-        <div class="social-box">
-          <!-- your list of social links -->
-          <%= link_to products_watches_path  do %>
+    <div class="image-menu">
+      <div class="row">
 
-          <h3>WATCHES</h3>
-          <%= image_tag "watchesDark.png", alt: "Watch" %>
+        <div class="col-xs-4 no-padding" >
+          <div class="frontpage" style="background-image: url(<%= image_url('necklacesDark.png') %>)">
+            <!-- your list of social links -->
+            <%= link_to products_jewelry_path  do %>
 
-          <% end %>
+            <h3 class="tumbheading">JEWELRY</h3>
+
+            <% end %>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-8">
-        <p>watches</p>
+
+
+        <div class="col-xs-4 no-padding" >
+          <div class="frontpage" style="background-image: url(<%= image_url('BagsDark.png') %>)" >
+            <!-- your list of social links -->
+            <%= link_to products_bags_path do %>
+
+            <h3 class="tumbheading">BAGS</h3>
+
+
+            <% end %>
+          </div>
+        </div>
+
+        <div class="col-xs-4 no-padding" >
+          <div class="frontpage" style="background-image: url(<%= image_url('watchesDark.png') %>)" >
+            <!-- your list of social links -->
+            <%= link_to products_watches_path  do %>
+
+            <h3 class="tumbheading">WATCHES</h3>
+
+
+            <% end %>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </div>
+<section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> Download Theme
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                    <h3> Find us at</h3>
+                    <ul class="social">
+                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.footer-->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © Bloom. All right reserved. </p>
+        </div>
+    </div>
+    <!--/.footer-bottom-->
+</footer>
