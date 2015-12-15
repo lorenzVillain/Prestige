@@ -1,31 +1,45 @@
-<!-- WATCHES -->
-
-   <!-- Main jumbotron for a primary marketing message or call to action -->
-   <div class="jumbotron">
-     <div class="container">
-       <h1>Watches</h1>
-       <p>SHINE, SHINE SHINE! </p>
-       <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+<div class="container-fluid">
+  <div class="jumbotron">
+       <div class="container">
+         <h1>Watches</h1>
+         <p>SHINE, SHINE SHINE! </p>
+         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+       </div>
      </div>
-   </div>
 
 
-<div class="row">
-<% @products.each do |product| %>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <%= image_tag product.picture_path %>
-      <div class="caption">
+  <div class="row">
+  <% @products.each do |product| %>
+    <div class="col-sm-6 col-md-4 card-prod">
+      <div class="thumbnail-content">
+        <% if product.picture_path %>
+        <%= image_tag product.picture_path %>
+        <% else %>
+        <%= image_tag "http://lorempixel.com/1125/660/fashion/1/" %>
+        <% end %>
+        <p class="price"><%=product.price %></p>
+      </div>
+      <div class= "user-content">
+        <div class="user-image">
+          <%= image_tag "user1.jpg", class:"img-circle" %>
+        </div>
+        <div class="user-reviews">
+            <div class="starrr" data-rating='4'></div>
+        </div>
+
+      </div>
+
+
+      <div class="body-content">
         <h3><%= product.title %></h3>
         <p><%= product.description %></p>
         <p><%=product.brand %></p>
-        <p><%=product.price %></p>
-        <p>
-          <%= link_to "SHOW", product_path(product), class: "btn btn-primary" %>
+
+          <%= link_to "RENT", product_path(product), class: "btn btn-primary" %>
           <a href="#" class="btn btn-default" role="button">ORDER</a></p>
       </div>
     </div>
+  <% end %>
   </div>
-<% end %>
 </div>
 

@@ -12,7 +12,7 @@ second_user = User.create(email: "user2@gmail.com", password: "user2@gmail.com")
 third_user = User.create(email: "user3@gmail.com", password: "user3@gmail.com")
 
 Product.create(title: "Gucci Bag", description: "Stylish trendy bag that will open doors for you", brand: "Gucci", user: first_user, category: "bags", price: 249, picture_path:"bag1.png")
-Product.create(title: "CARRERA", description: "THE CONTEMPORARY SPORTS WATCH INSPIRED BY MOTOR", brand: "Tag Heuer", user: first_user, category: "watch", price: 249, picture_path:"watches01.png")
+Product.create(title: "CARRERA", description: "THE CONTEMPORARY SPORTS WATCH INSPIRED BY MOTOR", brand: "Tag Heuer", user: first_user, category: "watch", price: 249, picture_path:"carrera.png")
 Product.create(title: "FORMULA 1", description: "THE CASUAL SPORTS WATCH INSPIRED BY FORMULA 1", brand: "Tag Heuer", user: first_user, category: "watch", price: 249, picture_path:"watches01.png")
 Product.create(title: "AQUARACER", description: "THE ESSENTIAL SPORTS WATCH INSPIRED BY THE AQUATIC WORLD", brand: "Tag Heuer", user: first_user, category: "watch", price: 249, picture_path:"watchesDark.png")
 Product.create(title: "LINK", description: "THE NEW DRESS WATCH FOR LADIES", brand: "Tag Heuer", user: first_user, category: "watch", price: 249, picture_path:"watchesDark.png")

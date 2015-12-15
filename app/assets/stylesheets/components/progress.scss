@@ -1,0 +1,47 @@
+/* PROGRESS TRACKER */
+.progress-tracker {
+    display: block;
+    margin: 0;
+    counter-reset: item;
+    list-style-type: none;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+}
+.progress-tracker .step:before {
+    background: #aaa;
+    border-radius: 40px;
+    color: #FFFFFF;
+    content: "";
+    display: list-item;
+    font-size: 18px;
+    line-height: 1.8em;
+    padding: 0 0 0 13px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    content: counter(item) "  ";
+    counter-increment: item;
+}
+.progress-tracker .step {
+    display: block;
+  float: left;
+  list-style-position: inside;
+  width: 33%;
+}
+.progress-tracker .step .step-name{
+    border-top: 8px solid #aaa;
+  display: block;
+  margin: 15px 0;
+  padding: 20px 0;
+}
+/*last step*/
+.progress-tracker .step:last-child { width: auto;}
+.progress-tracker .step:last-child .step-name{ border-color: transparent;}
+
+/*active step*/
+.progress-tracker .step.active .step-name {color: #666}
+.progress-tracker .step.active:before {background: #666;}
