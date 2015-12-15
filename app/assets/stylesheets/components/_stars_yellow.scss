@@ -1,0 +1,14 @@
+ .glyphicon-star-empty{
+  color:yellow;
+
+
+}
+
+.star {
+
+  span{
+    &:before{
+      color:yellow;
+    }
+  }
+}
