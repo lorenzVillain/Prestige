@@ -1,3 +1,6 @@
+
+
+
 .tumbheading {
     background: rgba(86, 86, 86, 0.34);
     width:100%;
@@ -197,7 +200,7 @@ color:grey;
   color: #EDEFF1 !important;
 }
 .footer-bottom {
-  background: #E3E3E3;
+  background: #E9E9E9;
   border-top: 1px solid #DDDDDD;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -214,7 +217,97 @@ color:grey;
 
 
 
+.jumbo-watches {
+  background-image:url("watchesDark.png");
+  color:white;
+  padding:100px 0;
+}
 
+
+.user
+{
+  display: flex;
+  align-items: center;
+}
+
+.user:last-child
+{
+  margin-bottom: 0;
+}
+
+.user-avatar
+{
+  flex: 0 0 96px;
+  width: 96px;
+  height: 96px;
+  background-color: #e7e7e7;
+}
+
+.user-description
+{
+  flex: 1;
+  margin-left: 24px;
+  padding: 12px;
+  border: solid 1px #e7e7e7;
+}
+
+.banner
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 180px;
+  background-color: #e7e7e7;
+}
+
+.banner-content
+{
+  text-align: left;
+}
+
+.banner-title, .banner-sub
+{
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+@media all and ( min-width: 480px ) {
+
+  .banner
+  {
+    height: 240px;
+  }
+
+}
+
+@media all and ( min-width: 768px ) {
+
+  .banner
+  {
+    height: 360px;
+  }
+
+}
+
+@media all and ( min-width: 960px ) {
+
+  .banner
+  {
+    height: 480px;
+  }
+
+}
+
+
+.user-username{
+  padding-top: 0px;
+
+}
+
+.theorder{
+  background-color:E9E9E9;
+}
 
 
 
