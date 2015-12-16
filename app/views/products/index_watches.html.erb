@@ -3,7 +3,6 @@
        <div class="container">
          <h1>Watches</h1>
          <p>SHINE, SHINE SHINE! </p>
-         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
        </div>
      </div>
 
@@ -17,7 +16,7 @@
         <% else %>
         <%= image_tag "http://lorempixel.com/1125/660/fashion/1/" %>
         <% end %>
-        <p class="price"><%=product.price %></p>
+        <p class="price">$ <%=product.price %></p>
       </div>
       <div class= "user-content">
         <div class="user-image">
@@ -35,8 +34,7 @@
         <p><%= product.description %></p>
         <p><%=product.brand %></p>
 
-          <%= link_to "RENT", product_path(product), class: "btn btn-primary" %>
-          <a href="#" class="btn btn-default" role="button">ORDER</a></p>
+          <%= link_to "RENT", product_path(product), class: "btn btn-primary pull-right" %>
       </div>
     </div>
   <% end %>
