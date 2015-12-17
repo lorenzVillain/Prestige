@@ -1,0 +1,16 @@
+Searching 108 files for "especial"
+
+/Users/Lorenz/code/lorenzVillain/Prestige/app/views/pages/index.html.erb:
+    9     <div class="container">
+   10      <div class="redbar"></div>
+   11:       <h1>Rent nice luxury goods from special owners</h1>
+   12        <div>
+   13          <small></small>
+   ..
+   78              <div class="row">
+   79                  <div class="col-lg-4 col-lg-offset-2">
+   80:                     <p>At Prestige, you can rent beautiful luxury goods from an unlimited selection of special owners willing to rent them out for a special occasion.</p>
+   81                  </div>
+   82                  <div class="col-lg-4">
+
+3 matches in 1 file

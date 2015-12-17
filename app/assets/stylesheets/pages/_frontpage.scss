@@ -297,13 +297,88 @@ color:grey;
 
 }
 
-.theorder{
-  background-color:E9E9E9;
+.block-info{
+  background: #fafafa;
+  padding: 20px;
+  margin-bottom: 40px;
+  h2{
+    font-size: 26px;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  h4{
+    font-size: 20px;
+    color: cadetblue;
+  }
+  h3{
+    font-weight:bold;
+  }
+  .theorder{
+    margin-top:40px;
+  }
+}
+.social-box{
+  h1{
+    margin-bottom: 45px;
+    background: #fafafa;
+    padding: 20px;
+    margin-top:0;
+  }
+  .image-product{
+    display:block;
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+.profile{
+  background: #fafafa;
+  padding: 20px;
+  margin-bottom:20px;
+  .profile-header{
+    display:flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    margin-bottom:10px;
+    .profile-image{
+      width: 50px;
+      img{
+        width:100%;
+      }
+    }
+    .profile-username{
+      margin-left:10px;
+      h4{
+        margin:0;
+        font-size: 16px;
+      }
+      .starrr{
+
+      }
+    }
+  }
+  .profile-body{
+    p{
+      font-size: 14px;
+      padding-left: 60px;
+    }
+  }
 }
 
+.body
+  {
+    margin-top: 185px;
+  }
 
 
+@media all and ( min-width: 768px ) {
 
+  .body
+  {
+    margin-top: 150px;
+  }
 
+}
 
 

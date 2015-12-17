@@ -1,76 +1,75 @@
-<<<<<<< HEAD
+
 
 <div class="container-fluid" id="fullscreen">
 
 
   <div class="bg-white">
-    <div class="container">
-      <div class="row" style='margin-top: 100px;'>
-        <div class="col-xs-6">
+    <div class="container body">
+      <div class="row">
+        <div class="col-sm-6">
           <div class="social-box">
 
-            <h2><%= @product.title %></h2>
-            <%= image_tag @product.picture_path, class:"img-responsive" %>
-            <br>
-            <div class= "user-content">
-          <div class="user-image">
-            <%= image_tag "user1.jpg", class:"img-circle" %>
+            <h1><%= @product.title %></h1>
+            <div class="image-product">
+              <%= image_tag @product.picture_path, class:"img-responsive" %>
+            </div>
           </div>
-          <div class="user-reviews">
-              <div class="starrr" data-rating='4'></div>
-          </div>
-
-
         </div>
-            <div class="user">
 
-              <div class="user-description">
-                <h2 class="user-username">Owner:Teddy Java</h2>
-                <p class="user-excerpt">28,graduated computer science, working as a freelancer web developer lives in Brussels Belgium</p>
+        <div class="col-sm-6">
+          <div class="block-info">
+            <h4>  <%= @product.brand %> </h4>
+            <h2>  <%= @product.description %></h2>
+
+            <h3>  <%= @product.price %> € </h3>
+
+
+            <%= form_for @order do |f| %>
+            <p>Delivery date:</p>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker6'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <p>Return date:</p>
+            <div class="form-group">
+              <div class='input-group date' id='datetimepicker7'>
+                  <input type='text' class="form-control" />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
               </div>
+          </div>
+          <div class="theorder">
+            <div class="order">
+              <%= f.hidden_field :product_id, :value => @product.id%>
+              <%= f.submit "Order", class: "btn btn-primary pull-right" %>
+              <% end %>
+              <div class="clearfix"></div>
             </div>
-
           </div>
         </div>
-
-        <div class="col-xs-6"  style='margin-top: 120px; padding-left:90px;'>
-        <p>  <%= @product.description %></p>
-        <p>  <%= @product.brand %> </p>
-        <p>  <%= @product.price %> € </p>
-
-          <%= form_for @order do |f| %>
-          Delivery date:
-
-
-            <div class="date" id='datetimepicker'>
-
-              <%= f.text_field :delivery_date, placeholder: 'Select the date', class: 'datetimepicker-field hidden' %>
-            </div>
-
-
-          </br>
-          Return date:
-            <div class="input-group date" id='datetimepicker2'>
-              <%= f.text_field :return_date, placeholder: 'Select the date', class: 'datetimepicker-field' %>
-              <span class="input-group-addon">
-                <span class="fa fa-calendar"></span>
-              </span>
-            </div>
-
-          </br>
-          <div class="theorder">
-            <div class="container">
-              <div class="row" style='margin-top: 100px;'>
-                <div class="col-xs-6">
-                    <div class="order">
-                    <%= f.hidden_field :product_id, :value => @product.id%>
-                    <%= f.submit "Order", class: "btn btn-primary pull-right" %>
-                    <% end %>
-
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="profile">
+            <div class="profile-header">
+              <div class="profile-image">
+                  <%= image_tag "user1.jpg", class:"img-circle" %>
+                </div>
+                <div class="profile-username">
+                  <h4>Teddy Java</h4>
+                  <div class="starrr" data-rating='4'></div>
                 </div>
               </div>
+            <div class="profile-body">
+              <p>28,graduated computer science, working as a freelancer web developer lives in Brussels Belgium</p>
             </div>
-
+          </div>
         </div>
       </div>
     </div>
@@ -105,15 +104,17 @@
     <!--/.footer-bottom-->
 </footer>
 
-
 <script type="text/javascript">
     $(function () {
-        $('#datetimepicker').datetimepicker({
-                inline: true,
-                sideBySide: false
-            });
-
-        $('#datetimepicker2').datetimepicker();
+        $('#datetimepicker6').datetimepicker();
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
     });
 </script>
-
