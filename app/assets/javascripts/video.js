@@ -18,7 +18,6 @@ $allVideos.each(function() {
 
 });
 
-console.log($allVideos)
 
 // When the window is resized
 $(window).resize(function() {
